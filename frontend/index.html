@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>GPS Co-ordinate Extraction Tool</title>
 		<link rel="stylesheet" href="index.css">
+		
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	</head>
 	<body>
@@ -12,21 +13,20 @@
 			<h1>Welcome to GPS Co-ordinate Extraction Tool</h1>
 			<p>Enter a source and a destination to extract 10 GPS coordinates from google maps between source and destination</p>
 			
-			<form action="/action_page.php" method="POST" id="myForm">
+			<form id="myForm" method="POST" >
 				<label for="source">Source:</label><br>
 				<input type="text" id="source" placeholder="Type source address"><br><br>
   				<div id="source_suggestions" class="autocomplete-suggestions"></div>
-				
 				
 				<label for="destination">Destination:</label><br>
 				<input type="text" id="destination" placeholder="Type destination address"><br><br>
   				<div id="dest_suggestions" class="autocomplete-suggestions"></div>
 				
-				
 				<button type="submit" id="submit">Extract GPS Coordinates</button>
 			</form>
-			 <!-- Display coordinates -->
-			 <div id="response-container" style="margin-top: 20px;"></div>
+			<div id="response-container" class="response-container"></div>
+			
+			<div id="map" class="map"></div>
 		</center>
 		<script src="script.js"></script>
 	</body>
