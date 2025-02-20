@@ -1,3 +1,10 @@
+body{
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
 p {
     margin-bottom: 50px;
 }
@@ -7,17 +14,45 @@ label {
     font-weight: 600;
 }
 
-input[type=text]{
+input[type="text"] {
     width: 40%;
     padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
+    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
-input[type=submit] {
+.autocomplete-suggestions {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 40%;
+    z-index: 999;
+    display: none;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.autocomplete-suggestions div:hover {
+    background-color: #f1f1f1;
+}
+
+#source_suggestions, #dest_suggestions {
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+button[type=submit] {
     background-color: #04AA6D;
     border: none;
     color: white;
@@ -26,4 +61,14 @@ input[type=submit] {
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+}
+
+.response-container{
+    margin-top: 20px;
+}
+
+.map{
+    height: 400px; 
+    width: 80%; 
+    margin: 60px 0px;
 }
